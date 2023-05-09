@@ -92,7 +92,8 @@ let api: ChatGPTAPI | ChatGPTUnofficialProxyAPI
 async function chatReplyProcess(options: RequestOptions) {
   const { message, lastContext, process, systemMessage } = options
   try {
-    let options: SendMessageOptions = { timeoutMs }
+    // let options: SendMessageOptions = { timeoutMs }
+    let options: SendMessageOptions = {}
 
     if (apiModel === 'ChatGPTAPI') {
       if (isNotEmptyString(systemMessage))
